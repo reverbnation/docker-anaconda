@@ -2,8 +2,9 @@ FROM phusion/baseimage:latest
 MAINTAINER Pablo Delgado "pdelgado@opentable.com"
 
 ADD src/ /tmp
-ADD notebook-server.sh /etc/start.sh
 RUN /tmp/install.sh
+
+ADD notebook-server.sh /etc/start.sh
 
 ENV PATH /opt/anaconda/bin:$PATH 
 
